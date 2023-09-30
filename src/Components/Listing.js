@@ -26,17 +26,14 @@ const Listing = (props) => {
             </TableRow>
         </TableHead>
         <TableBody>
-        {props.business.map((business, idx) => (
-            <TableRow key={business.id}>
-                <TableCell>{business.name}</TableCell>
-                <TableCell>{business.description}</TableCell>
-                <TableCell>{business.hours}</TableCell>
-                <TableCell>{business.location}</TableCell>
+        {props.listings.map((listings, idx) => (
+            <TableRow key={listings.id}>
+                <TableCell>{listings.name}</TableCell>
+                <TableCell>{listings.description}</TableCell>
+                <TableCell>{listings.hours}</TableCell>
+                <TableCell>{listings.address}</TableCell>
                 <TableCell>
-                    {/* <DeleteIcon
-                        // add onClick method here
-                        // onClick={() => props.removeCar(idx)}
-                        className="icon text-red" /> */}
+
                 </TableCell>
             </TableRow>
         ))}

@@ -1,6 +1,13 @@
 import { combineReducers } from 'redux'
 
-const business = (state = []) => state
+const listings = (state = [], action) => {
+  switch(action.type){
+    case "ADD_LISTING":
+      return[...state, action.value]
+    default:
+      return state
+  }
+}
 
 
-export default combineReducers({ business })
+export default combineReducers({ listings })
